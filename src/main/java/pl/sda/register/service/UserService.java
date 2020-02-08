@@ -15,11 +15,23 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public Set<String> findAllUserNames() {
-        return userRepository.findAllUserNames();
+    public Set<String> findAllUserNames(String firstName, boolean matchExact) {
+        return userRepository.findAllUserNames(firstName, matchExact);
     }
 
     public User findUserByUserName(String username) {
         return userRepository.findUserByUsername(username);
+    }
+
+    public void addUser(User user) {
+        userRepository.addUser(user);
+    }
+
+    public void removeUser(String username) {
+        userRepository.removeUser(username);
+    }
+
+    public void updateUser(User user) {
+        userRepository.updateUser(user);
     }
 }

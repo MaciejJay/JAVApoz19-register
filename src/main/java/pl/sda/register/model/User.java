@@ -9,11 +9,24 @@ public class User {
     private String lastName;
 
 
-    public User() { }
+    public User() {
+    }
 
     public User(String username, String firstName, String lastName) {
         this.username = username;
         this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
